@@ -1,5 +1,5 @@
 import { Locataire } from '../Locataire';
-import { Location } from '../Location';
+
 
 
 interface Props {

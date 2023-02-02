@@ -1,3 +1,5 @@
+import { VehiculeDetail } from "./components/VehiculeDetail"
+
 export interface Vehicule {
 
     id: number,
