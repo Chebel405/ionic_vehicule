@@ -18,7 +18,7 @@ export const LocataireDetailPage = () => {
 
     return <PageLayout titre="Locataire">
         <LocataireCard locataire={locataire} />
-        <Loca
+
 
 
 
