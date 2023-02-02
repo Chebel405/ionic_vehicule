@@ -5,5 +5,4 @@ export interface Locataire {
     prixTotal: number
     locataire: Locataire[]
 
-
 }

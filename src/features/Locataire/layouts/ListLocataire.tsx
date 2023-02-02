@@ -1,0 +1,4 @@
+Interface Props {
+    location: any[],
+    
+}

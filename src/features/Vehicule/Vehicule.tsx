@@ -7,6 +7,7 @@ export interface Vehicule {
     modele: string,
     prix: number,
     status: string,
-    type: string
+    type: string,
+    location: Location[]
 
 }
