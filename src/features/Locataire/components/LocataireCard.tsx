@@ -2,6 +2,8 @@ import { IonCard } from "@ionic/react"
 import { Link } from "react-router-dom"
 import { Locataire } from "../Locataire"
 import { IonTitle, IonText, IonCardContent } from "@ionic/react"
+import { LocataireDetailPage } from "../pages/LocataireDetailPage"
+
 
 
 interface Props {
@@ -17,7 +19,6 @@ export const LocataireCard = (props: Props) => {
                     <IonText>{props.locataire.nom}</IonText>
                     <IonText>{props.locataire.prenom}</IonText>
                     <IonText>{props.locataire.email}</IonText>
-
                 </IonCardContent>
             </IonCard>
         </IonCard>

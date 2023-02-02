@@ -1,8 +1,10 @@
-import { Locataire } from '../locataire';
+import { Locataire } from '../Locataire';
+import { Location } from '../Location';
 
 
 interface Props {
-    location?:
+    location: Location;
+    locataire: Locataire;
 }
 
 export const LocataireLocationListe = (props: Props) => {
