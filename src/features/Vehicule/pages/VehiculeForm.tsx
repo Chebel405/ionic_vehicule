@@ -2,18 +2,22 @@ import { useState } from "react"
 import { Vehicule } from "../Vehicule"
 import { vehiculeService } from "../services/VehiculeService"
 import { IonList, IonItem, IonLabel, IonInput, IonButton, IonTextarea } from "@ionic/react"
+import { useHistory } from "react-router"
+import { useParams } from "react-router"
 
 interface Props {
 
 }
 
 export const VehiculeForm = (props: Props) => {
+    const { id } = useParams<{ id: string }>();
     const [marque, setMarque] = useState<string>("")
     const [etat, setEtat] = useState<string>("")
     const [immatriculation, setImmatriculation] = useState<string>("")
     const [modele, setModele] = useState<string>("")
     const [prix, setPrix] = useState<number>();
     const [type, setType] = useState<string>("")
+    const history = useHistory()
 
     const submit = () => {
         if (!marque || !etat || !immatriculation ||
@@ -25,7 +29,8 @@ export const VehiculeForm = (props: Props) => {
             marque, etat, immatriculation, modele,
             prix, type
         }
-        vehiculeService.afficheVehicule(vehicule).then((vehicule) => {
+
+        vehiculeService.afficheVehicule(vehicule).then((vehicule: Vehicule) => {
             history.go(-1)
         })
     }

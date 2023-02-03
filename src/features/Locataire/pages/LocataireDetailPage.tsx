@@ -10,6 +10,8 @@ import { Location } from "history";
 
 
 export const LocataireDetailPage = () => {
+
+
     const { id } = useParams<{ id: string }>();
     const [locataire, setLocataire] = useState<Locataire>()
     const [location, setLocation] = useState<Location>()
@@ -18,11 +20,7 @@ export const LocataireDetailPage = () => {
         locataireService.afficherLocataire(id).then(setLocataire)
     })
 
-    return <PageLayout titre="Locataire">
-        <LocataireCard locataire={locataire} />
-
-
-
-
-    </PageLayout>
+    // return <PageLayout titre="Locataire">
+    //     <LocataireCard locataire={locataire} />
+    // </PageLayout>
 }
